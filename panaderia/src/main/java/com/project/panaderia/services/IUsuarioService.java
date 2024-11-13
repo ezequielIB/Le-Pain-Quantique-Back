@@ -1,5 +1,6 @@
 package com.project.panaderia.services;
 
+import com.project.panaderia.entity.Pedido;
 import com.project.panaderia.entity.Usuario;
 
 import java.util.List;
@@ -15,4 +16,5 @@ public interface IUsuarioService {
     Optional<Usuario> findByEmail(String email);
     Optional<Usuario> porEmail (String email);
     boolean existsByEmail(String email);
+    Usuario login(String email, String pass);
 }

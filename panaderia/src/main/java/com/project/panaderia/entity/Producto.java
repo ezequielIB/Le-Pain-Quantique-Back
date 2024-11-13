@@ -12,9 +12,40 @@ public class Producto {
     private String nombre;
     private Double precio;
 
-    @OneToMany(mappedBy = "producto")
-    private List<DetallePedido> detallePedidos;
+    //@OneToMany(mappedBy = "producto")
+    //private List<DetallePedido> detallePedidos;
 
-    // Getters y Setters
-    // ...
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Double precio) {
+        this.precio = precio;
+    }
+
+    /*
+    public List<DetallePedido> getDetallePedidos() {
+        return detallePedidos;
+    }
+
+    public void setDetallePedidos(List<DetallePedido> detallePedidos) {
+        this.detallePedidos = detallePedidos;
+    }
+    */
 }

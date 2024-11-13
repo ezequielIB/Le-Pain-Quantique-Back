@@ -1,5 +1,6 @@
 package com.project.panaderia.repository;
 
+import com.project.panaderia.entity.Pedido;
 import com.project.panaderia.entity.Usuario;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

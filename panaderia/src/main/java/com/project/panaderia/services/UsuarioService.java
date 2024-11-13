@@ -1,6 +1,7 @@
 package com.project.panaderia.services;
 
 import com.project.panaderia.entity.Usuario;
+import com.project.panaderia.exeptions.CustomException;
 import com.project.panaderia.repository.IUsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -59,5 +60,15 @@ public class UsuarioService implements IUsuarioService{
     @Override
     public boolean existsByEmail(String email) {
         return usuarioRepository.existsByEmail(email);
+    }
+
+    @Override public Usuario login(String email, String pass) {
+        Usuario usuario = usuarioRepository.porEmail(email).orElseThrow(
+                () -> new CustomException("Usuario no encontrado con email: " + email)
+        );
+        if (!usuario.getPassword().equals(pass)) {
+            throw new CustomException("Contraseña incorrecta");
+        }
+        return usuario;
     }
 }
