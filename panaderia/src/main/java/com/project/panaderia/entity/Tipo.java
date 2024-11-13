@@ -11,9 +11,6 @@ public class Tipo {
 
     private String nombre;
 
-    @OneToMany(mappedBy = "tipo")
-    private List<Usuario> usuarios;
-
     // Getters y Setters
     public Long getId() {
         return id;
@@ -29,13 +26,5 @@ public class Tipo {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public List<Usuario> getUsuarios() {
-        return usuarios;
-    }
-
-    public void setUsuarios(List<Usuario> usuarios) {
-        this.usuarios = usuarios;
     }
 }

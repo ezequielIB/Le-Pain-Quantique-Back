@@ -40,9 +40,8 @@ public class DetallePedidoService implements IDetallePedidoService {
     }
 
     @Override
-    @Transactional(readOnly = true)
     public List<DetallePedido> listarPorPedidoId(Long pedidoId) {
-        return detallePedidoRepository.listarPorPedidoId(pedidoId);
+        return List.of();
     }
 
     @Override

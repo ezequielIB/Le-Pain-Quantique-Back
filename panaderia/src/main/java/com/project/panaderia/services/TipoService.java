@@ -46,14 +46,13 @@ public class TipoService implements ITipoService {
     }
 
     @Override
-    @Transactional(readOnly = true)
     public Optional<Tipo> findByNombre(String nombre) {
-        return tipoRepository.findByNombre(nombre);
+        return Optional.empty();
     }
 
     @Override
-    @Transactional(readOnly = true)
     public boolean existsByNombre(String nombre) {
-        return tipoRepository.existsByNombre(nombre);
+        return false;
     }
+
 }

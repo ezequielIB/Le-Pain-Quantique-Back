@@ -1,5 +1,6 @@
 package com.project.panaderia.services;
 
+import com.project.panaderia.entity.Pedido;
 import com.project.panaderia.entity.Reserva;
 import com.project.panaderia.repository.IReservaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +29,8 @@ public class ReservaService implements IReservaService {
     }
 
     @Override
-    @Transactional
-    public Reserva guardar(Reserva reserva) {
-        return reservaRepository.save(reserva);
+    public Reserva guardar(Pedido reserva) {
+        return null;
     }
 
     @Override

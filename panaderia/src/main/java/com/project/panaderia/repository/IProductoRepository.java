@@ -7,7 +7,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface IProductoRepository extends CrudRepository<Producto, Long> {
-    //List<Producto> findByFechaPedidoBetween(String fechaInicio, String fechaFin);
-    //List<Producto> findByEstado(String estado);
 
 }

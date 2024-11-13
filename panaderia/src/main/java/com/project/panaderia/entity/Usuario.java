@@ -13,6 +13,17 @@ public class Usuario {
     @Column(unique = true)
     private String email;
     private String password;
+    @OneToOne
+    @JoinColumn(name = "tipo_id")
+    private Tipo tipo;
+
+    public Tipo getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
+    }
 
     public Long getId() {
         return id;
